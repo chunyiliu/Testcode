@@ -10,15 +10,6 @@ def execute_db(fname, sql_cmd):
     conn.close()
 
 
-def select_db(fname, sql_cmd):
-    conn = sqlite3.connect(fname)
-    c = conn.cursor()
-    c.execute(sql_cmd)
-    rows = c.fetchall()
-    conn.close()
-    return rows
-
-
 
 db_name = 'db.sqlite'
 #建立資料庫及資料表
